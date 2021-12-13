@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <style>
+  h1,h4{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}.main_footer .title{margin-bottom:30px}@media (max-width:991px){.main_footer .title{display:none}}.services_section .services_section_decorate_line{background-size:cover;background-position:50% 50%;bottom:-5.8%;font-size:10px;height:49em;left:49.3%;position:absolute;width:9em}.reviews_section .reviews_section__decorate_line{background-size:cover;background-position:50% 50%;bottom:0;font-size:10px;height:27.9em;left:47.1%;position:absolute;width:10.7em}:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#b5076b;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#e6f5e2;--bs-cyan:#0dcaf0;--bs-white:#ffffff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#5c2a9d;--bs-secondary:#e6f5e2;--bs-primary-rgb:92,42,157;--bs-secondary-rgb:230,245,226;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-body-color-rgb:33,37,41;--bs-body-bg-rgb:255,255,255;--bs-font-sans-serif:"Chivo",sans-serif;--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.375;--bs-body-color:#212529;--bs-body-bg:#ffffff}*,::after,::before{box-sizing:border-box}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%}h1,h2,h4,h5{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.5rem + 3vw)}@media (min-width:1200px){h1{font-size:3.75rem}}h2{font-size:calc(1.425rem + 2.1vw)}@media (min-width:1200px){h2{font-size:3rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}p{margin-top:0;margin-bottom:1rem}ul{padding-left:2rem}ul{margin-top:0;margin-bottom:1rem}a{color:#5c2a9d;text-decoration:underline}img,svg{vertical-align:middle}::-moz-focus-inner{padding:0;border-style:none}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}.list-unstyled{padding-left:0;list-style:none}.img-fluid{max-width:100%;height:auto}.container{width:100%;padding-right:var(--bs-gutter-x,15px);padding-left:var(--bs-gutter-x,15px);margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1250px){.container{max-width:1200px}}.row{--bs-gutter-x:30px;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(-1 * var(--bs-gutter-y));margin-right:calc(-.5 * var(--bs-gutter-x));margin-left:calc(-.5 * var(--bs-gutter-x))}.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x) * .5);padding-left:calc(var(--bs-gutter-x) * .5);margin-top:var(--bs-gutter-y)}.col-auto{flex:0 0 auto;width:auto}.col-1{flex:0 0 auto;width:8.33333%}.col-2{flex:0 0 auto;width:16.66667%}.col-3{flex:0 0 auto;width:25%}.col-4{flex:0 0 auto;width:33.33333%}.col-5{flex:0 0 auto;width:41.66667%}.col-6{flex:0 0 auto;width:50%}.col-7{flex:0 0 auto;width:58.33333%}.col-8{flex:0 0 auto;width:66.66667%}.col-9{flex:0 0 auto;width:75%}.col-10{flex:0 0 auto;width:83.33333%}.col-11{flex:0 0 auto;width:91.66667%}.col-12{flex:0 0 auto;width:100%}@media (min-width:576px){.col-sm{flex:1 0 0%}.col-sm-auto{flex:0 0 auto;width:auto}.col-sm-1{flex:0 0 auto;width:8.33333%}.col-sm-2{flex:0 0 auto;width:16.66667%}.col-sm-3{flex:0 0 auto;width:25%}.col-sm-4{flex:0 0 auto;width:33.33333%}.col-sm-5{flex:0 0 auto;width:41.66667%}.col-sm-6{flex:0 0 auto;width:50%}.col-sm-7{flex:0 0 auto;width:58.33333%}.col-sm-8{flex:0 0 auto;width:66.66667%}.col-sm-9{flex:0 0 auto;width:75%}.col-sm-10{flex:0 0 auto;width:83.33333%}.col-sm-11{flex:0 0 auto;width:91.66667%}.col-sm-12{flex:0 0 auto;width:100%}}@media (min-width:768px){.col-md{flex:1 0 0%}.col-md-auto{flex:0 0 auto;width:auto}.col-md-1{flex:0 0 auto;width:8.33333%}.col-md-2{flex:0 0 auto;width:16.66667%}.col-md-3{flex:0 0 auto;width:25%}.col-md-4{flex:0 0 auto;width:33.33333%}.col-md-5{flex:0 0 auto;width:41.66667%}.col-md-6{flex:0 0 auto;width:50%}.col-md-7{flex:0 0 auto;width:58.33333%}.col-md-8{flex:0 0 auto;width:66.66667%}.col-md-9{flex:0 0 auto;width:75%}.col-md-10{flex:0 0 auto;width:83.33333%}.col-md-11{flex:0 0 auto;width:91.66667%}.col-md-12{flex:0 0 auto;width:100%}}@media (min-width:992px){.col-lg{flex:1 0 0%}.col-lg-auto{flex:0 0 auto;width:auto}.col-lg-1{flex:0 0 auto;width:8.33333%}.col-lg-2{flex:0 0 auto;width:16.66667%}.col-lg-3{flex:0 0 auto;width:25%}.col-lg-4{flex:0 0 auto;width:33.33333%}.col-lg-5{flex:0 0 auto;width:41.66667%}.col-lg-6{flex:0 0 auto;width:50%}.col-lg-7{flex:0 0 auto;width:58.33333%}.col-lg-8{flex:0 0 auto;width:66.66667%}.col-lg-9{flex:0 0 auto;width:75%}.col-lg-10{flex:0 0 auto;width:83.33333%}.col-lg-11{flex:0 0 auto;width:91.66667%}.col-lg-12{flex:0 0 auto;width:100%}}@media (min-width:1250px){.col-xl{flex:1 0 0%}.col-xl-auto{flex:0 0 auto;width:auto}.col-xl-1{flex:0 0 auto;width:8.33333%}.col-xl-2{flex:0 0 auto;width:16.66667%}.col-xl-3{flex:0 0 auto;width:25%}.col-xl-4{flex:0 0 auto;width:33.33333%}.col-xl-5{flex:0 0 auto;width:41.66667%}.col-xl-6{flex:0 0 auto;width:50%}.col-xl-7{flex:0 0 auto;width:58.33333%}.col-xl-8{flex:0 0 auto;width:66.66667%}.col-xl-9{flex:0 0 auto;width:75%}.col-xl-10{flex:0 0 auto;width:83.33333%}.col-xl-11{flex:0 0 auto;width:91.66667%}.col-xl-12{flex:0 0 auto;width:100%}}.col-form-label{padding-top:calc(.375rem + 1px);padding-bottom:calc(.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}.col-form-label-lg{padding-top:calc(.5rem + 1px);padding-bottom:calc(.5rem + 1px);font-size:1.25rem}.col-form-label-sm{padding-top:calc(.25rem + 1px);padding-bottom:calc(.25rem + 1px);font-size:.875rem}.invalid-feedback{display:none;width:100%;margin-top:.25rem;font-size:.875em;color:#dc3545}.btn{display:inline-block;font-weight:400;line-height:1.5;color:#212529;text-align:center;text-decoration:none;vertical-align:middle;background-color:transparent;border:1px solid transparent;padding:12px 15px;font-size:1rem;border-radius:19px}.btn-primary{color:#fff;background-color:#5c2a9d;border-color:#5c2a9d}.btn-secondary{color:#000;background-color:#e6f5e2;border-color:#e6f5e2}.d-none{display:none!important}.order-first{order:-1!important}.text-center{text-align:center!important}.text-uppercase{text-transform:uppercase!important}@media (min-width:576px){.d-sm-block{display:block!important}.pe-sm-0{padding-right:0!important}}@media (min-width:992px){.d-lg-block{display:block!important}.d-lg-none{display:none!important}.order-lg-0{order:0!important}}:root{--swiper-theme-color:#007aff}.swiper{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;box-sizing:content-box}.swiper-wrapper{transform:translate3d(0,0,0)}.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative}:root{--swiper-navigation-size:44px}.swiper-zoom-container>svg{max-width:100%;max-height:100%;-o-object-fit:contain;object-fit:contain}:root{--animate-duration:1s;--animate-delay:1s;--animate-repeat:1}@-webkit-keyframes slideInLeft{from{transform:translate3d(-100%,0,0);visibility:visible}to{transform:translate3d(0,0,0)}}@keyframes slideInLeft{from{transform:translate3d(-100%,0,0);visibility:visible}to{transform:translate3d(0,0,0)}}.animate__slideInLeft{-webkit-animation-name:slideInLeft;animation-name:slideInLeft}@-webkit-keyframes slideInRight{from{transform:translate3d(100%,0,0);visibility:visible}to{transform:translate3d(0,0,0)}}@keyframes slideInRight{from{transform:translate3d(100%,0,0);visibility:visible}to{transform:translate3d(0,0,0)}}.animate__slideInRight{-webkit-animation-name:slideInRight;animation-name:slideInRight}@-webkit-keyframes slideInUp{from{transform:translate3d(0,100%,0);visibility:visible}to{transform:translate3d(0,0,0)}}@keyframes slideInUp{from{transform:translate3d(0,100%,0);visibility:visible}to{transform:translate3d(0,0,0)}}.animate__slideInUp{-webkit-animation-name:slideInUp;animation-name:slideInUp}*,::after,::before{box-sizing:border-box;outline:0!important;min-width:0}img{image-orientation:from-image}body,html{max-width:100%;min-width:320px;position:relative;overflow-x:hidden}a{color:inherit;text-decoration:none}ul{margin-bottom:0}picture{display:block}svg{display:block;width:100%}h1{color:#000;font:700 45px/1em Asul,sans-serif;letter-spacing:-.01em;margin-bottom:28px}@media (min-width:768px){h1{font-size:60px}}h2{color:#000;font:700 33px/1em Asul,sans-serif;letter-spacing:-.01em;margin-bottom:29px}@media (min-width:768px){h2{font-size:48px}}h4{color:#5c2a9d;font:700 18px/1.222em Chivo,sans-serif;letter-spacing:-.01em}p{color:#a1a1a1;font:400 16px/1.375em Chivo,sans-serif;letter-spacing:-.01em}.sub_title,h5{color:#5c2a9d;font:700 14px/1.714em Chivo,sans-serif;letter-spacing:-.01em;margin-bottom:13px}.relative{position:relative}section{padding:50px 0}.text-pink{color:#b5076b}.decorate_line{position:relative}.decorate_line::after{bottom:8px;background:#e6f5e2;height:13px;left:0;position:absolute;right:0;z-index:-1}.info_block h2,.info_block h5{padding-left:2px}.brands{color:#a1a1a1}.brands h5{color:#a1a1a1;line-height:1.286em;margin-bottom:0}.brands .list{justify-content:flex-end;font-size:10px}.brands .list li{margin-top:0}.brands .list li::after{margin:0 12px}.brands .list svg{height:3.1em;width:3.8em}@media (max-width:575px){.brands h5{margin-bottom:15px;text-align:center}.brands .list{justify-content:center}}.social_list.list svg{height:1.6em;width:1.6em}.btn{min-width:100px}@media (min-width:992px){.btn{min-width:140px}}.btn-block{display:block;width:100%}.contact_form .wrap_response_message{justify-content:center;align-items:center;flex-wrap:wrap;display:flex;display:none}.contact_form .wrap_response_message .success_block{background-color:#5c2a9d;border-radius:15px;color:#fff;font-size:24px;padding:30px}.contact_form .wrap_response_message{background:rgba(255,255,255,.5);bottom:0;left:0;position:absolute;right:0;top:0}.list{justify-content:flex-start;align-items:center;flex-wrap:wrap;display:flex;list-style:none;padding-left:0}.list>li{justify-content:center;align-items:center;flex-wrap:wrap;display:flex;margin:0 0 10px}.list>li::after{margin:0 19px}.list>li:last-child::after{display:none!important}.main_header{padding:58px 0}.main_header .inner_wrap{justify-content:space-between;align-items:center;flex-wrap:nowrap;display:flex}.main_header .logo{display:inline-block;max-width:67px}.main_header .logo img{display:block}@media (min-width:1600px){.main_header{padding:75px 0}.main_header .logo{left:92px;position:absolute;top:calc(50% - 13px)}.main_header .header_btn{position:absolute;top:calc(50% - 23px);right:90px}}.main_header .nav{color:#000;font:700 16px/1em Chivo,sans-serif;letter-spacing:-.01em}@media (max-width:1599px){.main_header .header_btn,.main_header .logo{flex:0 0 auto}.main_header .nav{flex:1 1 auto;padding:0 40px}}.main_header .main_nav li{margin:0}.main_header .main_nav li::after{margin:0 25px}@media (max-width:991px){.main_header .nav{background:#fff;display:none;left:0;position:absolute;right:0;top:100%}.main_header .main_nav li{border-bottom:1px solid #a1a1a1;justify-content:flex-start;padding:15px 0;width:100%}.main_header .main_nav li::after{display:none}.main_header{background:#fff;padding:10px 0}}.main_header .menu_btn{justify-content:space-between;align-items:center;flex-wrap:wrap;display:flex;flex-direction:column;font-size:6px;height:3.2em;width:5em}.main_header .menu_btn .dash{background:#5c2a9d;border-radius:20px;height:.5em;width:5em}.main_header .menu_btn .dash:nth-of-type(3){position:absolute;top:calc(50% - .25em)}.sticky_header{min-width:320px;position:fixed;top:0;width:100%;z-index:1001}body{display:flex;flex-direction:column;min-height:100vh}.main_header{flex:none;width:100%}.content_wrapper{flex:1 0 auto}.slider{padding:71px 40px}@media (min-width:768px){section{padding:79px 0}.slider{margin-bottom:-29px;padding:71px 0 100px}}.slider .wrap_img{margin-bottom:32px}.slider .btn{display:none}.slider h4{margin-bottom:11px}.slider p{margin-bottom:24px}.slider .wrap_slide{padding:30px 20px}@media (min-width:992px){.slider .wrap_slide{padding:49px 33px 52px 40px}}.project{padding:0 5px}.project .wrap_content{border-radius:30px;background:#f6e7da;overflow:hidden;position:relative}@media (min-width:992px) and (max-width:1249px){.project .wrap_content{min-height:431px}}.project .btn_wrap{margin-left:-8px;max-width:160px;padding-top:28px}.project .info_block{padding-top:50px}@media (min-width:1250px){.project{padding:0 28px}.project .wrap_content{border-radius:50px;min-height:575px}.project .info_block{padding-top:134px}}.project .img_wrap{font-size:6px;bottom:0;max-width:110.7em;position:absolute;right:0}@media (min-width:1250px) and (max-width:1499px){.project .img_wrap{font-size:8px}}@media (min-width:1500px) and (max-width:1699px){.project .wrap_content{min-height:647px}.project .img_wrap{font-size:9px}}@media (min-width:1700px){.project .wrap_content{min-height:720px}.project .img_wrap{font-size:10px}}.project p{color:#555}@media (max-width:767px){.hero{padding-top:130px}}.hero .info{padding-top:30px}@media (min-width:992px){.hero .info{padding-top:202px}}.hero p{font-size:18px;line-height:1.333em}.hero .btns_wrap{padding-top:20px}@media (min-width:992px){.hero .btns_wrap{max-width:349px;padding-top:38px}.hero .img{font-size:9px;height:78.2em;padding-left:6.7em;width:93.5em;position:relative}.hero .img::before{background-color:#5c2a9d;background-image:linear-gradient(-48deg,#5c2a9d 0,#7364bf 100%);border-radius:50%;height:68.5em;position:absolute;right:5.1em;top:-29.5em;width:68.5em;z-index:-1}}@media (max-width:991px){.project .wrap_content{padding-bottom:30px}.project .img_wrap{display:none}.hero .img{margin:0 auto;max-width:500px}}@media (min-width:992px) and (max-width:1249px){.hero .img{font-size:7px}}@media (min-width:1250px) and (max-width:1399px){.hero .img{font-size:9px}}@media (min-width:1400px){.hero .img{font-size:10px}}.second_section .img_wrap{font-size:10px}.second_section .img{height:26.8em;position:relative;width:26.8em}@media (min-width:768px){.second_section .img_wrap{padding-bottom:23.8em;padding-right:23.3em;padding-top:2px;position:relative;text-align:center}.second_section .img_wrap::before{background-color:#f6e7da;border-radius:50%;height:6.5em;position:absolute;top:8.6em;right:8.2em;width:6.5em;z-index:-1}.second_section .img_wrap::after{background-color:#5c2a9d;border-radius:50%;height:3.6em;position:absolute;bottom:14.4em;right:19.7em;width:3.6em}.second_section .img{display:inline-block}.second_section .img::before{background-color:#e6f5e2;border-radius:50%;height:47em;position:absolute;top:5.7em;left:-9.2em;width:47em;z-index:-1}}.second_section .info{padding-top:58px}.second_section p{margin-bottom:32px}.third_section{padding:79px 0 0}.third_section h2{margin:0 auto;max-width:655px}.services_section .services_list .img_wrap svg{height:3.1em;width:3.8em}.services_section .decorate_img{font-size:7px;height:25.8em;left:2em;position:absolute;top:-26.4em;width:28.4em}@media (min-width:768px){.services_section .decorate_img{font-size:10px}}@media (min-width:1500px){.services_section .decorate_img{left:-2.8em}}
+</style>
+<link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Chivo:wght@400;700&display=swap">
+
+    <script>
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.expand = 10;
+      lazySizesConfig.expFactor = 1.5;
+    </script>
+
+    <link rel="preload" href="assets/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/all.css"></noscript>
+<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var t,o=loadCSS.relpreload={};o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},o.support()||(o.poly(),t=n.setInterval(o.poly,500),n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})),"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+  </head>
+  <body>
+    <header class="main_header sticky_header js-main-header">
+      <div class="container">
+        <div class="inner_wrap">
+          <a href="/" class="logo">
+            <picture>
+              <source type="image/webp" srcset="assets/images/webp/logo.webp 67w" sizes="67px">
+              <img class="img-fluid" src="assets/images/logo.png" srcset="assets/images/logo.png 67w" alt="Logo" sizes="67px">
+            </picture>
+          </a>
+          <div class="menu_btn js-menu-btn d-lg-none">
+            <div class="dash"></div>
+            <div class="dash"></div>
+            <div class="dash"></div>
+            <div class="dash"></div>
+          </div>
+          <nav class="nav js-main-nav">
+            <ul class="main_nav list-unstyled list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="header_btn btn btn-secondary">Get Start</a>
+        </div>
+      </div>
+    </header>
+    <main class="content_wrapper">
+      <section class="hero">
+        <div class="container">
+          <div class="row">
+            <div class="info col-xl-4 col-lg-5">
+              <h1>
+                We are ready to assist <br class="d-none d-lg-block">our
+                clients
+              </h1>
+              <p>
+                Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id
+                interdum urna
+              </p>
+              <div class="btns_wrap">
+                <div class="row">
+                  <div class="col-6">
+                    <a href="#" class="btn btn-primary btn-block">Get Start</a>
+                  </div>
+                  <div class="col-6">
+                    <a href="#" class="btn btn-secondary btn-block">How it Work</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="img_wrap col-xl-8 col-lg-7 order-first order-lg-0">
+              <div class="img">
+                <img src="assets/images/her_section.svg" class="img-fluid" width="867" height="782" alt="First section">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="second_section">
+        <div class="container">
+          <div class="row">
+            <div class="img_wrap col-xl-7 col-lg-6 wow animate__slideInLeft" data-wow-duration="1s">
+              <div class="img">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/second_section.svg" width="268" height="267" class="lazyload" alt="Second section">
+              </div>
+            </div>
+            <div class="
+                info info_block
+                col-xl-5 col-lg-6
+                wow
+                animate__slideInRight
+              " data-wow-duration="1s">
+              <h5 class="text-uppercase">Who We Are</h5>
+              <h2>An independent consulting firm</h2>
+              <p>
+                Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id
+                interdum urna. Nam ac elit a ante commodo tristique. Duis lacus
+                urna,condimentum a vehicula a, hendrerit ac nisi Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Aliquam tate,
+                tortor nec commodo ultricies, vitae viverra urna .
+              </p>
+              <div class="brands">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <h5 class="sub_title text-uppercase">
+                      Trusted thounds <br class="d-none d-sm-block">of diverse
+                      companies
+                    </h5>
+                  </div>
+                  <div class="col-sm-7 pe-sm-0">
+                    <ul class="list-unstyled list">
+                      <li>
+                        <svg aria-hidden="true" role="img">
+                          <use
+                            href="#icon-angrycreative"
+                            xlink:href="#icon-angrycreative"
+                          ></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg aria-hidden="true" role="img">
+                          <use
+                            href="#icon-firstdraft-brands"
+                            xlink:href="#icon-firstdraft-brands"
+                          ></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg aria-hidden="true" role="img">
+                          <use
+                            href="#icon-mailchimp"
+                            xlink:href="#icon-mailchimp"
+                          ></use>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg aria-hidden="true" role="img">
+                          <use
+                            href="#icon-meetup"
+                            xlink:href="#icon-meetup"
+                          ></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="third_section">
+        <div class="container">
+          <h5 class="text-center">Our Mission</h5>
+          <h2 class="text-center">
+            We want to contribute to the
+            <span class="text-pink decorate_line">creation</span> of valua
+          </h2>
+          <div class="slider swiper js-goals-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="wrap_slide">
+                  <div class="wrap_img">
+                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/slider_02.svg" width="111" height="81" alt="slider 01">
+                  </div>
+                  <h4>Corporate Finance</h4>
+                  <p>
+                    Nullam lacinia faucibus risus, a euismod lorem tincidunt id.
+                  </p>
+                  <a href="#" class="btn btn-secondary">Get Start</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="wrap_slide">
+                  <div class="wrap_img">
+                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/slider_03.svg" width="111" height="81" alt="slider 01">
+                  </div>
+                  <h4>Tax & Legal</h4>
+                  <p>
+                    Class aptent taciti sociosqu ad litora torquent per conubia
+                    nostra
+                  </p>
+                  <a href="#" class="btn btn-secondary">Get Start</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="wrap_slide">
+                  <div class="wrap_img">
+                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/slider_01.svg" width="111" height="81" alt="slider 01">
+                  </div>
+                  <h4>Accountancy</h4>
+                  <p>
+                    Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id
+                    interdum urna.
+                  </p>
+                  <a href="#" class="btn btn-secondary">Get Start</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wow animate__slideInUp" data-wow-duration="1s">
+        <article class="project">
+          <div class="wrap_content">
+            <div class="img_wrap">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/project_01.svg" width="1107" height="720" alt="project">
+            </div>
+            <div class="container relative">
+              <div class="row">
+                <div class="info_block col-xl-4 col-lg-5">
+                  <h5>Featured Work</h5>
+                  <h2>The personal Finance App</h2>
+                  <p>
+                    Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id
+                    interdum urna. Nam ac elit a ante commodo tristique. Duis
+                    lacus urna condimentum a vehicula a, hendrerit ac nisi.
+                  </p>
+                  <div class="btn_wrap">
+                    <a href="#" class="btn btn-primary btn-block">View Project</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="services_section">
+        <div class="circle_1 circle"></div>
+        <div class="circle_2 circle"></div>
+        <div class="circle_3 circle"></div>
+        <div class="circle_4 circle"></div>
+        <div class="circle_5 circle"></div>
+        <div class="services_section_decorate_line d-none d-lg-block"></div>
+        <div class="container relative">
+          <div class="decorate_img">
+            <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/service_img.svg" width="284" height="258" alt="Searching">
+          </div>
+          <div class="row">
+            <div class="col-md-6 wow animate__slideInLeft" data-wow-duration="1s">
+              <ul class="services_list list-unstyled">
+                <li>
+                  <div class="img_wrap" style="background-color: #e6f5e2; color: #b5076b">
+                    <svg aria-hidden="true" role="img">
+                      <use
+                        href="#icon-chart-pie"
+                        xlink:href="#icon-chart-pie"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <h4>Business Strategy</h4>
+                    <p>
+                      Imperdiet nibh vel magna lacinia ultrices. Sed id interdum
+                      urna.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="img_wrap" style="background-color: #f6e7da; color: #45046a">
+                    <svg aria-hidden="true" role="img">
+                      <use href="#icon-dice" xlink:href="#icon-dice"></use>
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <h4>Financial Planing</h4>
+                    <p>
+                      Imperdiet nibh vel magna lacinia ultrices. Sed id interdum
+                      urna.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="img_wrap" style="background-color: #efe3fe; color: #5c2a9d">
+                    <svg aria-hidden="true" role="img">
+                      <use href="#icon-rocket" xlink:href="#icon-rocket"></use>
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <h4>Life and Pensions</h4>
+                    <p>
+                      Imperdiet nibh vel magna lacinia ultrices. Sed id interdum
+                      urna.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="
+                col-md-6 col-lg-5
+                info_block
+                offset-lg-1
+                wow
+                animate__slideInRight
+              " data-wow-duration="1s">
+              <h5>Amazing Services</h5>
+              <h2>
+                We provide smart and effective
+                <span class="text-pink">solutions</span>
+              </h2>
+              <p>
+                Nibh vel magna lacinia ultrices. Sed id interdum urna. Nam ac
+                elit a ante commodo tristique. Duis lacus urna,condimentum a
+                vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Aliquam tate, tortor nec commodo
+                ultricies, vitae viverra urna .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews_section">
+        <div class="container wrap_people js-person-list-review">
+          <div class="reviews_section__decorate_line d-none d-md-block"></div>
+          <div class="
+              review_person review_person_01
+              js-person-review
+              wow
+              animate__bounceIn
+            " data-wow-duration="1s" data-name-author-review="Tony Nguyen" data-position-author-review="Ceo Moontheme" data-text-review="1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <picture>
+              <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/people_1.webp 70w" sizes="70px">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/people_1.png" srcset="
+                  data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                " data-srcset="assets/images/people_1.png 70w" width="70" height="70" alt="Person 1" sizes="70px">
+            </picture>
+          </div>
+          <div class="
+              review_person review_person_02
+              js-person-review
+              wow
+              animate__bounceIn
+            " data-wow-duration="1s" data-name-author-review="Tony Stark" data-position-author-review="Iron Man" data-text-review="2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <picture>
+              <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/people_2.webp 70w" sizes="70px">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/people_2.png" srcset="
+                  data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                " data-srcset="assets/images/people_2.png 70w" width="70" height="70" alt="Person 2" sizes="70px">
+            </picture>
+          </div>
+          <div class="
+              review_person review_person_03
+              js-person-review
+              wow
+              animate__bounceIn
+            " data-wow-duration="1s" data-name-author-review="Bruce Banner" data-position-author-review="Hulk" data-text-review="2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <picture>
+              <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/people_3.webp 60w" sizes="60px">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/people_3.png" srcset="
+                  data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                " data-srcset="assets/images/people_3.png 60w" width="60" height="60" alt="Person 3" sizes="60px">
+            </picture>
+          </div>
+          <div class="
+              review_person review_person_04
+              js-person-review
+              wow
+              animate__bounceIn
+            " data-wow-duration="1s" data-name-author-review="Bucky Barnes" data-position-author-review="Winter Soldier" data-text-review="3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <picture>
+              <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/people_4.webp 60w" sizes="60px">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/people_4.png" srcset="
+                  data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                " data-srcset="assets/images/people_4.png 60w" width="60" height="60" alt="Person 4" sizes="60px">
+            </picture>
+          </div>
+          <div class="
+              review_person review_person_05
+              js-person-review
+              wow
+              animate__bounceIn
+            " data-wow-duration="1s" data-name-author-review="Clint Barton" data-position-author-review="Hawkeye" data-text-review="4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <picture>
+              <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/people_5.webp 60w" sizes="60px">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/people_5.png" srcset="
+                  data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                " data-srcset="assets/images/people_5.png 60w" width="60" height="60" alt="Person 5" sizes="60px">
+            </picture>
+          </div>
+          <div class="
+              review_person review_person_06
+              js-person-review
+              wow
+              animate__bounceIn
+            " data-wow-duration="1s" data-name-author-review="Carol Danvers" data-position-author-review="Captain Marvel" data-text-review="5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <picture>
+              <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/people_6.webp 45w" sizes="45px">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/people_6.png" srcset="
+                  data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                " data-srcset="assets/images/people_6.png 45w" width="45" height="45" alt="Person 6" sizes="45px">
+            </picture>
+          </div>
+          <div class="
+              review_person review_person_07
+              js-person-review
+              wow
+              animate__bounceIn
+            " data-wow-duration="1s" data-name-author-review="Groot" data-position-author-review="Groot" data-text-review="6 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <picture>
+              <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/people_7.webp 45w" sizes="45px">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/people_7.png" srcset="
+                  data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                " data-srcset="assets/images/people_7.png 45w" width="45" height="45" alt="Person 7" sizes="45px">
+            </picture>
+          </div>
+          <div class="
+              review_person review_person_08
+              js-person-review
+              wow
+              animate__bounceIn
+            " data-wow-duration="1s" data-name-author-review="Scott Lang" data-position-author-review="Ant-Man" data-text-review="7 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <picture>
+              <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/people_8.webp 45w" sizes="45px">
+              <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/people_8.png" srcset="
+                  data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                " data-srcset="assets/images/people_8.png 45w" width="45" height="45" alt="Person 7" sizes="45px">
+            </picture>
+          </div>
+          <div class="content_review">
+            <p>
+              “
+              <span class="js-text-review">Hendrerit ac nisi Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Aliquam tate, tortor nec commodo ultricies
+                vitae viverra urna.</span>
+              ”
+            </p>
+            <span class="author_review"><strong class="js-name-author-review">Tony Nguyen</strong> -
+              <span class="js-position-author-review">Ceo Moontheme</span></span>
+          </div>
+        </div>
+      </section>
+      <section class="text-center">
+        <div class="container">
+          <div class="wrap_subscribe_form">
+            <h2>
+              Get everything you need <span class="text-pink">to succeed!</span>
+            </h2>
+            <p>Join the newsletter and get 2 months free with full access.</p>
+            <form action="/" class="subscribe_form">
+              <div class="input_group">
+                <input type="email" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="contact_section">
+        <div class="container">
+          <div class="wrap_content">
+            <h2>Get in touch</h2>
+            <p>
+              Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id
+              interdum urna.
+            </p>
+          </div>
+          <form action="/" class="contact_form js-contact-form" novalidate="">
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                <div class="invalid-feedback">This field is required.</div>
+              </div>
+              <div class="col-md-4 form-group">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                <div class="invalid-feedback">This field is required.</div>
+              </div>
+              <div class="col-md-4 form-group">
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                <div class="invalid-feedback">This field is required.</div>
+              </div>
+              <div class="col-12 form-group">
+                <textarea name="message" id="message" class="form-control" cols="30" rows="7" placeholder="Your message here" required></textarea>
+                <div class="invalid-feedback">This field is required.</div>
+              </div>
+              <div class="col-12">
+                <div class="wrap_btn">
+                  <button type="submit" class="btn btn-primary btn-block">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="wrap_response_message">
+              <div class="success_block">Thank your message!</div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="main_footer">
+      <div class="wrap_content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 logo_wrap order-first order-lg-0">
+              <a href="/" class="logo">
+                <picture>
+                  <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="assets/images/webp/logo_lg.webp 171w" sizes="171px">
+                  <img class="img-fluid lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/logo_lg.png" srcset="
+                      data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                    " data-srcset="assets/images/logo_lg.png 171w" width="171" height="71" alt="Logo" sizes="171px">
+                </picture>
+              </a>
+              <p class="copyright">©Copyright 2020. Made by moontheme</p>
+            </div>
+            <div class="col-lg-2 col-sm-6">
+              <h4 class="title">Link</h4>
+              <ul class="list-unstyled nav_list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6 order-first order-lg-0">
+              <h4 class="title">Stay Connected</h4>
+              <address>
+                <a href="mailto:info@moontheme.net" class="mailto">info@moontheme.net</a>
+                <p>
+                  004 Riley Street, Surry<br>
+                  Hills 2050 Sydney, Australia
+                </p>
+                <a href="tel:+4525643324456">+ 452 56 4332 4456</a>
+              </address>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <ul class="social_list list social_list">
+                <li>
+                  <a href="#" class="facebook">
+                    <svg aria-hidden="true" role="img">
+                      <use
+                        href="#icon-facebook"
+                        xlink:href="#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="twitter">
+                    <svg aria-hidden="true" role="img">
+                      <use
+                        href="#icon-twitter"
+                        xlink:href="#icon-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="instagram">
+                    <svg aria-hidden="true" role="img">
+                      <use
+                        href="#icon-instagram"
+                        xlink:href="#icon-instagram"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/all.js" defer></script>
+
+    <script>
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', '/assets/images/svg-icons.svg');
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          let svg = document.createElement('div');
+          svg.innerHTML = xhr.responseText;
+          document.getElementsByTagName('body')[0].appendChild(svg);
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>
